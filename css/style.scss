@@ -1,0 +1,65 @@
+body {
+	// background-color: #212121;
+	overflow-x: hidden;
+	// display: flex;
+	// align-items: center;
+	// height: 100vh;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+
+// ===================================================
+
+:root {
+	--slide-size: 33.333%;
+}
+
+
+.main {
+	width: 100%;
+	margin-top: 150px;
+}
+
+
+
+
+.c-form-text {
+	--c-form-text-hight: 3.125em;
+	// container-type: inline-size;
+	position: relative;
+}
+
+.c-form-text__body {
+	appearance: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	font-size: 16px;
+	overflow: hidden;
+	outline: 2px solid transparent;
+	height: var(--c-form-text-hight);
+	// line-height: 3.125;
+	padding: 0 1em;
+	text-overflow: ellipsis;
+	transition-duration: .2s;
+	transition-property: outline;
+	transition-timing-function: ease;
+	width: 100%;
+
+	&::placeholder {
+		color: #ccc;
+		font-size: .8em;
+	}
+
+	&:where(.c-form-text._clear *) {
+		padding-right: 2em;
+	}
+
+	// @include container(300px) {
+	// 	--c-form-text-hight: 2.5em;
+	// }
+}

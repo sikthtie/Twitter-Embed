@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Twitter埋め込み</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+	<link rel="stylesheet" href="./css/style.css">
+
+	<script>
+		window.twttr = (function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+
+			t._e = [];
+			t.ready = function (f) {
+				t._e.push(f);
+			};
+
+			return t;
+		}(document, "script", "twitter-wjs"));
+
+	</script>
+
+	<script src="./script.js" defer></script>
+</head>
+
+<body>
+
+
+
+
+	<main class="main">
+
+		<div class="" style="padding: 10px;">
+			<div class="c-form-text">
+				<input class="c-form-text__body" type="text" name="" data-js-x="input" placeholder="https://">
+			</div>
+			<div id="tweetEmbed"></div>
+			<div id="errorMessage" style="color: red;"></div>
+		</div>
+
+
+	</main>
+
+
+</body>
+
+</html>
